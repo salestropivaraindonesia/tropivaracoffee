@@ -13,3 +13,4 @@
 - The shared site Logo uses CDN pointers for the supplied artwork with transparent background and trimmed empty margins; retain its geometry and derive the local favicon from the same artwork so branding remains consistent.
 - The global stylesheet justifies `p` and `dd` text, which overrides alignment inherited from a parent; when a paragraph or definition value must be centered or right-aligned, put the alignment utility on that `p`/`dd` element itself.
 - Shared decorative coffee engravings use non-interactive CSS masks in section padding through SiteLayout hooks; keep ornaments outside content and use semantic theme tokens so all routes remain consistent.
+- External builds resolve imported CDN pointers through the build-only portable-assets plugin and emit local image files; this keeps external deployments independent of Lovable's origin-only asset proxy without changing source provenance.

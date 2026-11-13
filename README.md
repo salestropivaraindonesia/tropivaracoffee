@@ -24,3 +24,9 @@ cd <repository-name>
 npm i
 npm run dev
 ```
+
+## Photos on external hosting
+
+`npm run build` downloads imported Lovable photo pointers and bundles them as local image files. Upload the complete generated output, not just its HTML or JavaScript. The build needs access to `https://tropivaracoffee.lovable.app`; if an original image is unavailable, the build stops instead of shipping broken photos.
+
+For the standalone React + Vite version, extract `releases/tropivara-react-vite-source.zip` and select the extracted folder as the Vercel project root (build: `npm run build`, output: `dist`). That edition already includes its images in `public/media`. For cPanel, upload all contents of `releases/tropivara-cpanel-upload.zip`, including `media`, `assets`, and `.htaccess`.

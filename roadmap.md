@@ -1,5 +1,7 @@
 # Roadmap
 
+- [x] Make imported photo pointers portable on external hosting and verify all photo files and pages.
+
 - [x] Place the supplied official logo and derive its favicon.
 - [x] Replace synthetic coffee imagery with natural, real photographs and retain attribution privately alongside the assets.
 - [x] Verify logo and photos on all seven pages, including a small-screen check.
