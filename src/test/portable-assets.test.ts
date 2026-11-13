@@ -1,6 +1,9 @@
 import { afterEach, describe, expect, it, vi } from "vitest";
 import { portableAssets } from "../../scripts/portable-assets";
-vi.mock("node:fs/promises", () => ({ readFile: vi.fn().mockResolvedValue(JSON.stringify({ url: "/__l5e/assets-v1/example/tv-01.jpg", original_filename: "tv-01.jpg", content_type: "image/jpeg" })) }));
+vi.mock("node:fs/promises", () => {
+  const readFile = vi.fn().mockResolvedValue(JSON.stringify({ url: "/__l5e/assets-v1/example/tv-01.jpg", original_filename: "tv-01.jpg", content_type: "image/jpeg" }));
+  return { readFile, default: { readFile } };
+});
 
 afterEach(() => vi.unstubAllGlobals());
 
