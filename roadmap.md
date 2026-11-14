@@ -1,5 +1,8 @@
 # Roadmap
 
+- [x] Fix image URL generation that caused hosted SSR failures; verify all 22 offline photos, seven pages and regression tests.
+- [ ] Verify the updated published site after the owner publishes this revision (waiting for publication).
+
 - [x] Make imported photo pointers portable on external hosting and verify all photo files and pages.
 
 - [x] Place the supplied official logo and derive its favicon.
