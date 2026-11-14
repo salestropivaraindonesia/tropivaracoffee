@@ -11,4 +11,4 @@
 - [x] Add the PDF's four-step How We Work summary, add Home navigation, and remove public photo-source captions while retaining private attribution.
 - [x] Activate WhatsApp buttons — official number +62 851 9657 2911 supplied.
 - [x] Point Instagram, Facebook and LinkedIn links at the official profile URLs.
-- [ ] Add restrained coffee ornaments to empty section margins across all pages and verify phone and desktop layouts.
+- [x] Add restrained coffee ornaments to empty section margins across all pages and verify phone and desktop layouts.
