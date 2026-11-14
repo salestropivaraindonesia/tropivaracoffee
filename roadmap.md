@@ -1,6 +1,7 @@
 # Roadmap
 
-- [ ] Fix hosted page failures from image URL generation and verify offline local photo serving.
+- [x] Fix image URL generation that caused hosted SSR failures; verify all 22 offline photos, seven pages and regression tests.
+- [ ] Verify the updated published site after the owner publishes this revision (waiting for publication).
 
 - [x] Make imported photo pointers portable on external hosting and verify all photo files and pages.
 
