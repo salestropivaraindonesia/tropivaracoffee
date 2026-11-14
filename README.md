@@ -27,6 +27,8 @@ npm run dev
 
 ## Photos on external hosting
 
-`npm run build` downloads imported Lovable photo pointers and bundles them as local image files. Upload the complete generated output, not just its HTML or JavaScript. The build needs access to `https://tropivaracoffee.lovable.app`; if an original image is unavailable, the build stops instead of shipping broken photos.
+Both `npm run dev` and `npm run build` read the original photo bytes from the versioned `releases/tropivara-cpanel-upload.zip`. Keep that file when cloning the repository. No Lovable photo connection or download is needed: development serves the imported pointer paths locally, and builds bundle the photos using public paths that also work with server-rendered pages. If a photo is missing from the archive, the command reports the missing filename instead of silently substituting HTML.
+
+After pulling these changes, run `npm install` and restart `npm run dev`. For deployment, upload the complete generated output, including its image assets. The main repository remains the Lovable TanStack application; use the separate export below for standard static hosting.
 
 For the standalone React + Vite version, extract `releases/tropivara-react-vite-source.zip` and select the extracted folder as the Vercel project root (build: `npm run build`, output: `dist`). That edition already includes its images in `public/media`. For cPanel, upload all contents of `releases/tropivara-cpanel-upload.zip`, including `media`, `assets`, and `.htaccess`.

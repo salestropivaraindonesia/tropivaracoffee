@@ -1,5 +1,7 @@
 # Roadmap
 
+- [ ] Fix hosted page failures from image URL generation and verify offline local photo serving.
+
 - [x] Make imported photo pointers portable on external hosting and verify all photo files and pages.
 
 - [x] Place the supplied official logo and derive its favicon.
