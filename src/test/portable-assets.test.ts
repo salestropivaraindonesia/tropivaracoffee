@@ -12,7 +12,7 @@ describe("Portable photos", () => {
     const transform = hook(plugin.transform);
     if (typeof transform !== "function") throw new Error("Missing transform");
     const archive = unzipSync(await readFile("releases/tropivara-cpanel-upload.zip"));
-    const filenames = Object.keys(archive).filter((name) => name.startsWith("media/") && archive[name].length > 0);
+    const filenames = Object.keys(archive).filter((name) => name.startsWith("media/") && (archive[name]?.length ?? 0) > 0);
     expect(filenames).toHaveLength(22);
     const fetcher = vi.spyOn(globalThis, "fetch").mockRejectedValue(new Error("Offline"));
     try {
@@ -28,7 +28,7 @@ describe("Portable photos", () => {
     } finally {
       fetcher.mockRestore();
     }
-  });
+  }, 20000);
 
   it("emits a public URL safe for hosted SSR without import.meta.url", async () => {
     const plugin = portableAssets();

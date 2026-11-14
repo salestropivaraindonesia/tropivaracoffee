@@ -31,7 +31,7 @@ export function portableAssets(): Plugin {
     },
     configureServer(server) {
       server.middlewares.use(async (request, response, next) => {
-        const path = (request.url ?? "").split("?")[0];
+        const path = (request.url ?? "").split("?")[0] ?? "";
         if (!path.startsWith("/__l5e/assets-v1/")) return next();
         try {
           const filename = decodeURIComponent(path.split("/").at(-1) ?? "");
@@ -68,6 +68,7 @@ export function portableAssets(): Plugin {
     // A public path is the same in HTML rendered on the server and in the browser.
     resolveFileUrl({ referenceId, fileName }) {
       if (references.has(referenceId)) return JSON.stringify(`${base}${fileName}`);
+      return undefined;
     },
   };
 }
